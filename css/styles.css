@@ -1,3 +1,87 @@
+*:focus {
+  border-radius: 2px!important;
+  outline: 0!important;
+  box-shadow: 0 0 2px 1.5px #fff,
+              0 0 3px 3px #000!important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  color: white;
+}
+
+.visually-hidden:focus {
+  width: auto;
+  height: auto;
+  clip: auto;
+  cursor: pointer;
+  z-index: 999;
+}
+
+fieldset {
+  border: none;
+}
+
+/* BULMA REWRITES */
+
+a {
+  color: #2c6fda;
+}
+.button.is-info {
+  background-color: #0078c7!important;
+}
+.button.is-info:hover {
+  background-color: #005c98!important;
+}
+.subtitle {
+  color: #fff!important;
+}
+.tile .subtitle {
+  color: #000!important;
+}
+.section-heading .subtitle {
+  color: #000!important;
+}
+.hero.is-info {
+  background-color: #0078c7!important;
+}
+.hero.is-info .tabs.is-boxed li.is-active a {
+  color: #000!important;
+}
+.tag:not(body).is-danger {
+  background-color: #e4002e!important;
+}
+.tag:not(body).is-primary {
+  background-color: #007968!important;
+}
+.tag:not(body).is-success {
+  color: #3a3333!important;
+}
+.has-text-grey-light {
+  color: #757575!important;
+}
+.help.is-success {
+  color: #1a8640!important;
+}
+.input.is-success, .textarea.is-success {
+  border-color: #1a8640!important;
+}
+.help.is-danger {
+  color: #e8002f!important;
+}
+.input.is-danger, .textarea.is-danger {
+  border-color: #e8002f!important;
+}
+
+
+
 .hero-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/accessibility-hero-banner.jpg") no-repeat center center fixed;
