@@ -5,6 +5,10 @@
               0 0 3px 3px #000!important;
 }
 
+a {
+  text-decoration: underline;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -27,6 +31,11 @@
 
 fieldset {
   border: none;
+}
+
+#timer {
+  color: #ffffff;
+  font-size: 24px;
 }
 
 /* BULMA REWRITES */
@@ -79,7 +88,11 @@ a {
 .input.is-danger, .textarea.is-danger {
   border-color: #e8002f!important;
 }
-
+.has-background-grey-light,
+.has-background-light,
+.has-background-grey-lighter {
+  background-color: #fff!important;
+}
 
 
 .hero-bg {
