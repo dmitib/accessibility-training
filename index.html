@@ -64,12 +64,30 @@
                 </button>
               </span>
               <span class="navbar-item">
-                <button class="button is-white is-outlined">
+                <button class="button is-white is-outlined" aria-expanded="false" aria-haspopup="true" id="header-menu-button">
                   <span class="icon">
                     <span class="fab fa-superpowers" aria-hidden="true"></span>
                   </span>
                   <span>Examples</span>
                 </button>
+                <ul role="menu" aria-label="Examples" id="header-menu" hidden>
+                  <li role="menuitem" class="header-menu-item" tabindex="-1">
+                    Administration
+                  </li>
+                  <li role="menuitem" class="header-menu-item" tabindex="-1">
+                    Team Settings
+                  </li>
+                  <li role="menuitem" class="header-menu-item" tabindex="-1">
+                    Manage Your Team
+                  </li>
+                  <li role="menuitem" class="header-menu-item" tabindex="-1">
+                    Invitations
+                  </li>
+                  <hr />
+                  <li role="menuitem" class="header-menu-item" tabindex="-1">
+                    Authentication
+                  </li>
+                </ul>
               </span>
               <span class="navbar-item">
                 <button class="button is-white is-outlined">
@@ -96,7 +114,7 @@
     </div>
 
     <div class="hero-body">
-      <span id="timer" aria-live="polite">You are here for 0 minutes</span>
+      <span id="timer" aria-live="polite">You are here for 0 seconds</span>
       <div class="container has-text-centered">
         <h6 class="column is-6 is-offset-3">
           <div class="title has-text-white">We have web accessibility in mind</div>
@@ -325,28 +343,42 @@
           <ul role="tablist">
             <li
               data-target="pane-1"
-              id="1"
+              id="pictures-tab"
               class="is-active"
               tabindex="0"
               role="tab"
               aria-controls="pane-1"
-              aria-current="true"
+              aria-selected="true"
             >
               <a href="#">
                 <span class="icon is-small"><span class="fa fa-image" aria-hidden="true"></span></span>
-                <span>Pictures</span>
+                <span id="pictures">Pictures</span>
               </a>
             </li>
-            <li data-target="pane-3" id="3" tabindex="0" role="tab" aria-controls="pane-3">
+            <li 
+              data-target="pane-3"
+              id="team-tab"
+              tabindex="-1"
+              role="tab"
+              aria-controls="pane-3"
+              aria-selected="false"
+            >
               <a href="#">
                 <span class="icon is-small"><span class="fab fa-superpowers" aria-hidden="true"></span></span>
-                <span>Team</span>
+                <span id="team">Team</span>
               </a>
             </li>
-            <li data-target="pane-4" id="4" tabindex="0" role="tab" aria-controls="pane-4">
+            <li 
+              data-target="pane-4"
+              id="videos-tab"
+              tabindex="-1"
+              role="tab"
+              aria-controls="pane-4"
+              aria-selected="false"
+            >
               <a href="#">
                 <span class="icon is-small"><span class="fa fa-film" aria-hidden="true"></span></span>
-                <span>Video</span>
+                <span id="video">Video</span>
               </a>
             </li>
           </ul>
@@ -355,7 +387,7 @@
     </section>
 
     <section class="tab-content container" aria-label="List of topics content">
-      <div class="tab-pane is-active level" id="pane-1" role="tabpanel">
+      <div class="tab-pane is-active level" id="pane-1" role="tabpanel" aria-labelledby="pictures">
         <div class="container">
           <div class="columns features">
             <h4 class="column is-4">
@@ -411,7 +443,7 @@
         </div>
       </div>
 
-      <div class="tab-pane" id="pane-3" role="tabpanel">
+      <div class="tab-pane" id="pane-3" role="tabpanel" aria-labelledby="team" hidden>
         <div class="columns medias">
           <div class="column">
             <div class="media">
@@ -484,7 +516,7 @@
         </div>
       </div>
 
-      <div class="tab-pane" id="pane-4">
+      <div class="tab-pane" id="pane-4" role="tabpanel" aria-labelledby="video" hidden>
         <div class="columns is-centered">
           <div class="column is-three-quarters">
             <div class="title has-text-centered" tabindex="0">Inspired video</div>

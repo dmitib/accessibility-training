@@ -38,6 +38,29 @@ fieldset {
   font-size: 24px;
 }
 
+#header-menu {
+  width: 160px;
+  position: absolute;
+  color: white;
+  padding: 10px 0;
+  top: 66px;
+  left: -12px;
+  background-color: #002882;
+  border-radius: 4px;
+}
+
+.header-menu-item {
+  padding: 4px 10px;
+}
+
+.header-menu-item[tabindex="0"] {
+  border: 1px solid white;
+}
+
+#header-menu hr {
+  margin: 6px 0;
+}
+
 /* BULMA REWRITES */
 
 a {
